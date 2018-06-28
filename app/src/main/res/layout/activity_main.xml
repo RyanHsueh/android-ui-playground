@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TitleBarActivity"
+        android:textAllCaps="false"
+        android:onClick="startTitleBarActivity"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ListViewActivity"
+        android:textAllCaps="false"
+        android:onClick="startListViewActivity"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RecycleViewActivity"
+        android:textAllCaps="false"
+        android:onClick="startRecycleViewActivity"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WaterFallRecycleActivity"
+        android:textAllCaps="false"
+        android:onClick="startWaterFallRecyclerActivity"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CharCharActivity"
+        android:textAllCaps="false"
+        android:onClick="startChatChatActivity"/>
+
+
+</LinearLayout>
