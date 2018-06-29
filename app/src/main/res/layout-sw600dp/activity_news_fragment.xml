@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".NewsFragmentActivity">
+
+    <fragment
+        android:id="@+id/fragment_news_list"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:name="com.example.ryanhsueh.uiplayground.fragment.NewsListFragment"/>
+
+    <FrameLayout
+        android:id="@+id/layout_news_content"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+        <fragment
+            android:id="@+id/fragment_news_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.ryanhsueh.uiplayground.fragment.NewsContentFragment"/>
+
+    </FrameLayout>
+
+</LinearLayout>

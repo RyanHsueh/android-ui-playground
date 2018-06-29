@@ -20,6 +20,8 @@ import java.util.List;
 
 public class NewsListFragment extends Fragment {
 
+    private boolean mIsTwoPane;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -32,6 +34,17 @@ public class NewsListFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        if (getActivity().findViewById(R.id.layout_news_content) != null) {
+            mIsTwoPane = true;
+        } else {
+            mIsTwoPane = false;
+        }
+
+
+        initRecyclerView();
+    }
+
+    private void initRecyclerView() {
         List<News> newsList = Util.createNews();
         NewsAdapter adapter = new NewsAdapter(newsList);
 
@@ -41,6 +54,7 @@ public class NewsListFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
     }
+
 
     class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
@@ -75,7 +89,14 @@ public class NewsListFragment extends Fragment {
                 public void onClick(View view) {
                     int position = holder.getAdapterPosition();
                     News news = mNewsList.get(position);
-                    NewsContentActivity.actionStart(getActivity(), news);
+
+                    if (mIsTwoPane) {
+                        NewsContentFragment fragment =
+                                (NewsContentFragment)getFragmentManager().findFragmentById(R.id.fragment_news_content);
+                        fragment.refresh(news.getTitle(), news.getContent());
+                    } else {
+                        NewsContentActivity.actionStart(getActivity(), news);
+                    }
                 }
             });
 

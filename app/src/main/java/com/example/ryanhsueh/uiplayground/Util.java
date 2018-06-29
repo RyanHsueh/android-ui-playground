@@ -49,20 +49,9 @@ public class Util {
 
     public static List<News> createNews() {
         List<News> newsList = new ArrayList<>();
-        newsList.add(new News("News Title " + 1, getRandomLengthString(" News content " + 1)));
-        newsList.add(new News("News Title " + 2, getRandomLengthString(" News content " + 2)));
-        newsList.add(new News("News Title " + 3, getRandomLengthString(" News content " + 3)));
-        newsList.add(new News("News Title " + 4, getRandomLengthString(" News content " + 4)));
-        newsList.add(new News("News Title " + 5, getRandomLengthString(" News content " + 5)));
-        newsList.add(new News("News Title " + 6, getRandomLengthString(" News content " + 6)));
-        newsList.add(new News("News Title " + 7, getRandomLengthString(" News content " + 7)));
-        newsList.add(new News("News Title " + 8, getRandomLengthString(" News content " + 8)));
-        newsList.add(new News("News Title " + 9, getRandomLengthString(" News content " + 9)));
-        newsList.add(new News("News Title " + 10, getRandomLengthString(" News content " + 10)));
-        newsList.add(new News("News Title " + 11, getRandomLengthString(" News content " + 11)));
-        newsList.add(new News("News Title " + 12, getRandomLengthString(" News content " + 12)));
-        newsList.add(new News("News Title " + 13, getRandomLengthString(" News content " + 13)));
-        newsList.add(new News("News Title " + 14, getRandomLengthString(" News content " + 14)));
+        for (int i=0 ; i<50 ; i++) {
+            newsList.add(new News("News Title " + i, getRandomLengthString(" News content " + i)));
+        }
 
         return newsList;
     }
