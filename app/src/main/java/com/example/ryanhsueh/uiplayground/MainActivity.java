@@ -36,4 +36,9 @@ public class MainActivity extends AppCompatActivity {
         intent.setClass(this, ChatChatActivity.class);
         startActivity(intent);
     }
+    public void startSimpleFragmentActivity(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, SimpleFragmentActivity.class);
+        startActivity(intent);
+    }
 }
