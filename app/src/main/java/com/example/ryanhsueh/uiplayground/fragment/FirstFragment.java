@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ryanhsueh.uiplayground.R;
+import com.example.ryanhsueh.uiplayground.SimpleFragmentActivity;
 
 public class FirstFragment extends Fragment {
 
@@ -18,5 +19,18 @@ public class FirstFragment extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_first, container, false);
         return view;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        getView().findViewById(R.id.btn_first_fragment).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((SimpleFragmentActivity) getActivity()).updateFrameLayout();
+            }
+        });
+
     }
 }

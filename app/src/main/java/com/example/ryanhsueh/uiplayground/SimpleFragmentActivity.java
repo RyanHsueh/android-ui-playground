@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.FrameLayout;
 
 import com.example.ryanhsueh.uiplayground.fragment.SecondFragment;
 import com.example.ryanhsueh.uiplayground.fragment.ThirdFragment;
@@ -25,6 +26,8 @@ public class SimpleFragmentActivity extends AppCompatActivity {
                 replaceFragment(new ThirdFragment());
             }
         });
+
+        Fragment first = getSupportFragmentManager().findFragmentById(R.id.fragmemt_first);
     }
 
     private void replaceFragment(Fragment fragment) {
@@ -33,6 +36,15 @@ public class SimpleFragmentActivity extends AppCompatActivity {
         transaction.replace(R.id.frame_layout, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+    public void updateFrameLayout() {
+        FrameLayout layout = findViewById(R.id.frame_layout);
+        if (layout.getVisibility() == View.VISIBLE) {
+            layout.setVisibility(View.GONE);
+        } else {
+            layout.setVisibility(View.VISIBLE);
+        }
     }
 
 }
