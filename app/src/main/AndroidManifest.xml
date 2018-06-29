@@ -23,7 +23,9 @@
         <activity android:name=".RecycleViewActivity" />
         <activity android:name=".WaterFallRecyclerActivity" />
         <activity android:name=".ChatChatActivity" />
-        <activity android:name=".SimpleFragmentActivity"></activity>
+        <activity android:name=".SimpleFragmentActivity" />
+        <activity android:name=".NewsFragmentActivity" />
+        <activity android:name=".NewsContentActivity"/>
     </application>
 
 </manifest>

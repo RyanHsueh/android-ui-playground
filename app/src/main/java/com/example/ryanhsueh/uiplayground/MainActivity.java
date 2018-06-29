@@ -41,4 +41,9 @@ public class MainActivity extends AppCompatActivity {
         intent.setClass(this, SimpleFragmentActivity.class);
         startActivity(intent);
     }
+    public void startNewsFragmentActivity(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, NewsFragmentActivity.class);
+        startActivity(intent);
+    }
 }
