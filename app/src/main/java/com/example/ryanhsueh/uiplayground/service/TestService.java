@@ -1,4 +1,4 @@
-package com.example.ryanhsueh.uiplayground;
+package com.example.ryanhsueh.uiplayground.service;
 
 import android.app.Service;
 import android.content.Intent;
@@ -10,7 +10,7 @@ public class TestService extends Service {
     private static final String TAG = TestService.class.getSimpleName();
     
     private TestBinder mBinder = new TestBinder();
-    class TestBinder extends Binder {
+    public class TestBinder extends Binder {
         
         public void downloadData() {
             Log.d(TAG, "downloadData: ");
