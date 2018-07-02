@@ -46,4 +46,9 @@ public class MainActivity extends AppCompatActivity {
         intent.setClass(this, NewsFragmentActivity.class);
         startActivity(intent);
     }
+    public void startServiceTryActivity(View view) {
+        Intent intent = new Intent();
+        intent.setClass(this, ServiceTryActivity.class);
+        startActivity(intent);
+    }
 }

@@ -56,5 +56,12 @@
         android:textAllCaps="false"
         android:onClick="startNewsFragmentActivity"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ServiceTryActivity"
+        android:textAllCaps="false"
+        android:onClick="startServiceTryActivity"/>
+
 
 </LinearLayout>

@@ -25,7 +25,14 @@
         <activity android:name=".ChatChatActivity" />
         <activity android:name=".SimpleFragmentActivity" />
         <activity android:name=".NewsFragmentActivity" />
-        <activity android:name=".NewsContentActivity"/>
+        <activity android:name=".NewsContentActivity" />
+
+        <service
+            android:name=".TestService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ServiceTryActivity"></activity>
     </application>
 
 </manifest>
