@@ -9,8 +9,8 @@ import android.util.Log;
 public class TestService extends Service {
     private static final String TAG = TestService.class.getSimpleName();
     
-    private DownloadBinder mBinder = new DownloadBinder();
-    class DownloadBinder extends Binder {
+    private TestBinder mBinder = new TestBinder();
+    class TestBinder extends Binder {
         
         public void downloadData() {
             Log.d(TAG, "downloadData: ");

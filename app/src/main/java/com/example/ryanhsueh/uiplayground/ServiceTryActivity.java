@@ -10,13 +10,16 @@ import android.view.View;
 
 public class ServiceTryActivity extends AppCompatActivity {
 
-    private ServiceConnection mConnection = new ServiceConnection() {
+
+    private TestService.TestBinder mTestService;
+
+    private ServiceConnection mTestServiceConn = new ServiceConnection() {
 
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            TestService.DownloadBinder service = (TestService.DownloadBinder) iBinder;
-            service.downloadData();
-            int progress = service.getProgress();
+            mTestService = (TestService.TestBinder) iBinder;
+            mTestService.downloadData();
+            int progress = mTestService.getProgress();
         }
 
         @Override
@@ -41,10 +44,12 @@ public class ServiceTryActivity extends AppCompatActivity {
 
     public void bindService(View view) {
         Intent intent = new Intent(this, TestService.class);
-        bindService(intent, mConnection, BIND_AUTO_CREATE);
+        bindService(intent, mTestServiceConn, BIND_AUTO_CREATE);
     }
     public void unbindService(View view) {
-        unbindService(mConnection);
+        if (mTestService != null) {
+            unbindService(mTestServiceConn);
+        }
     }
 
 }
