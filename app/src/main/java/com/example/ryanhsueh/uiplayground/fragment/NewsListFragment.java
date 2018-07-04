@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -46,7 +47,7 @@ public class NewsListFragment extends Fragment {
 
     private void initRecyclerView() {
         List<News> newsList = Util.createNews();
-        NewsAdapter adapter = new NewsAdapter(newsList);
+        NewsAdapter adapter = new NewsAdapter(newsList, getFragmentManager(), mIsTwoPane);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
@@ -56,9 +57,11 @@ public class NewsListFragment extends Fragment {
     }
 
 
-    class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
+    private static class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
         private List<News> mNewsList;
+        private FragmentManager mFM;
+        private boolean mIsTwoPane;
 
         class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -74,13 +77,15 @@ public class NewsListFragment extends Fragment {
             }
         }
 
-        public NewsAdapter(List<News> newsList) {
+        public NewsAdapter(List<News> newsList, FragmentManager fragmentManager, boolean isTwoPane) {
             mNewsList = newsList;
+            mFM = fragmentManager;
+            mIsTwoPane = isTwoPane;
         }
 
         @NonNull
         @Override
-        public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int position) {
+        public ViewHolder onCreateViewHolder(@NonNull final ViewGroup viewGroup, int position) {
             View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.news_item, viewGroup, false);
             final ViewHolder holder = new ViewHolder(view);
 
@@ -92,10 +97,10 @@ public class NewsListFragment extends Fragment {
 
                     if (mIsTwoPane) {
                         NewsContentFragment fragment =
-                                (NewsContentFragment)getFragmentManager().findFragmentById(R.id.fragment_news_content);
+                                (NewsContentFragment) mFM.findFragmentById(R.id.fragment_news_content);
                         fragment.refresh(news.getTitle(), news.getContent());
                     } else {
-                        NewsContentActivity.actionStart(getActivity(), news);
+                        NewsContentActivity.actionStart(viewGroup.getContext(), news);
                     }
                 }
             });
