@@ -18,7 +18,7 @@ import android.widget.Toast;
 import com.example.ryanhsueh.uiplayground.DownloadAsyncTask;
 import com.example.ryanhsueh.uiplayground.DownloadObserver;
 import com.example.ryanhsueh.uiplayground.R;
-import com.example.ryanhsueh.uiplayground.ServiceTryActivity;
+import com.example.ryanhsueh.uiplayground.activity.ServiceTryActivity;
 
 import java.io.File;
 

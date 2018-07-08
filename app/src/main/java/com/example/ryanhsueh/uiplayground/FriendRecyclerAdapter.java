@@ -21,7 +21,7 @@ public class FriendRecyclerAdapter extends RecyclerView.Adapter<FriendRecyclerAd
     private List<Friend> mFriendList;
     private int mResourceId;
 
-    interface OnFriendItemClickListener {
+    public interface OnFriendItemClickListener {
         void onItemClicked(int position);
         void onItemImageClicked(int position);
     }
@@ -44,7 +44,7 @@ public class FriendRecyclerAdapter extends RecyclerView.Adapter<FriendRecyclerAd
         TextView textAge;
         ImageView imgPhoto;
 
-        public ViewHolder(@NonNull View view) {
+        ViewHolder(@NonNull View view) {
             super(view);
             this.rootView = view;
             this.textName = view.findViewById(R.id.text_name);

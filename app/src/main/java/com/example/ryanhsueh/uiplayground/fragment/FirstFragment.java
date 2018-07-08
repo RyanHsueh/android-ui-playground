@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ryanhsueh.uiplayground.R;
-import com.example.ryanhsueh.uiplayground.SimpleFragmentActivity;
+import com.example.ryanhsueh.uiplayground.activity.SimpleFragmentActivity;
 
 public class FirstFragment extends Fragment {
 

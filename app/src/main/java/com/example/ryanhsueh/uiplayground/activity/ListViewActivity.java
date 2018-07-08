@@ -1,4 +1,4 @@
-package com.example.ryanhsueh.uiplayground;
+package com.example.ryanhsueh.uiplayground.activity;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -15,6 +15,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.ryanhsueh.uiplayground.ITitleBarAction;
+import com.example.ryanhsueh.uiplayground.MyTitleBar;
+import com.example.ryanhsueh.uiplayground.R;
+import com.example.ryanhsueh.uiplayground.Util;
 import com.example.ryanhsueh.uiplayground.data.Friend;
 
 import java.util.List;

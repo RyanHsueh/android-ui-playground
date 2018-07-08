@@ -12,28 +12,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TitleBarActivity" />
-        <activity android:name=".ListViewActivity" />
-        <activity android:name=".RecycleViewActivity" />
-        <activity android:name=".WaterFallRecyclerActivity" />
-        <activity android:name=".ChatChatActivity" />
-        <activity android:name=".SimpleFragmentActivity" />
-        <activity android:name=".NewsFragmentActivity" />
-        <activity android:name=".NewsContentActivity" />
+        <activity android:name=".activity.TitleBarActivity" />
+        <activity android:name=".activity.ListViewActivity" />
+        <activity android:name=".activity.RecycleViewActivity" />
+        <activity android:name=".activity.WaterFallRecyclerActivity" />
+        <activity android:name=".activity.ChatChatActivity" />
+        <activity android:name=".activity.SimpleFragmentActivity" />
+        <activity android:name=".activity.NewsFragmentActivity" />
+        <activity android:name=".activity.NewsContentActivity" />
 
         <service
             android:name=".service.TestService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ServiceTryActivity" />
+        <activity android:name=".activity.ServiceTryActivity" />
 
         <service
             android:name=".service.DownloadService"

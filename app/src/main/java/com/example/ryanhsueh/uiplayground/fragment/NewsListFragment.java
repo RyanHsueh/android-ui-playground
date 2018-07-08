@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.ryanhsueh.uiplayground.NewsContentActivity;
+import com.example.ryanhsueh.uiplayground.activity.NewsContentActivity;
 import com.example.ryanhsueh.uiplayground.R;
 import com.example.ryanhsueh.uiplayground.Util;
 import com.example.ryanhsueh.uiplayground.data.News;

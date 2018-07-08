@@ -1,10 +1,11 @@
-package com.example.ryanhsueh.uiplayground;
+package com.example.ryanhsueh.uiplayground.activity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.ryanhsueh.uiplayground.R;
 import com.example.ryanhsueh.uiplayground.data.News;
 import com.example.ryanhsueh.uiplayground.fragment.NewsContentFragment;
 

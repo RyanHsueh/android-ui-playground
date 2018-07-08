@@ -1,9 +1,13 @@
-package com.example.ryanhsueh.uiplayground;
+package com.example.ryanhsueh.uiplayground.activity;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.ryanhsueh.uiplayground.FriendRecyclerAdapter;
+import com.example.ryanhsueh.uiplayground.ITitleBarAction;
+import com.example.ryanhsueh.uiplayground.R;
+import com.example.ryanhsueh.uiplayground.Util;
 import com.example.ryanhsueh.uiplayground.data.Friend;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.ryanhsueh.uiplayground;
+package com.example.ryanhsueh.uiplayground.activity;
 
 import android.Manifest;
 import android.content.ComponentName;
@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.ryanhsueh.uiplayground.R;
 import com.example.ryanhsueh.uiplayground.service.DownloadService;
 import com.example.ryanhsueh.uiplayground.service.TestService;
 

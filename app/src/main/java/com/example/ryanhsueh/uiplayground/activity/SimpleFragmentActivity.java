@@ -1,4 +1,4 @@
-package com.example.ryanhsueh.uiplayground;
+package com.example.ryanhsueh.uiplayground.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.example.ryanhsueh.uiplayground.R;
 import com.example.ryanhsueh.uiplayground.fragment.SecondFragment;
 import com.example.ryanhsueh.uiplayground.fragment.ThirdFragment;
 
