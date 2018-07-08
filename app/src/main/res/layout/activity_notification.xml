@@ -12,5 +12,21 @@
         android:layout_height="wrap_content"
         android:text="Simple Notificatoin"
         android:onClick="simpleNotification"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Style Text Notificatoin"
+        android:onClick="styleTextNotification"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Style Picture Notificatoin"
+        android:onClick="stylePictureNotification"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="advanced Notificatoin"
+        android:onClick="advancedNotification"/>
+
 
 </LinearLayout>
