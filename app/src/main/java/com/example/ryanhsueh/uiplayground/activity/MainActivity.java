@@ -57,4 +57,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, NotificationActivity.class);
         startActivity(intent);
     }
+    public void startCameraAlbumActivity(View view) {
+        Intent intent = new Intent(this, CameraAlbumActivity.class);
+        startActivity(intent);
+    }
 }
