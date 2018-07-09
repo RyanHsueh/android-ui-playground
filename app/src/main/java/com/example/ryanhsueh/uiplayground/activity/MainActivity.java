@@ -61,4 +61,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CameraAlbumActivity.class);
         startActivity(intent);
     }
+    public void startMediaActivity(View view) {
+        Intent intent = new Intent(this, MediaActivity.class);
+        startActivity(intent);
+    }
 }
