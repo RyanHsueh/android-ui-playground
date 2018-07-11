@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -32,14 +33,14 @@
         <service
             android:name=".service.TestService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="false" />
 
         <activity android:name=".activity.ServiceTryActivity" />
 
         <service
             android:name=".service.DownloadService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="false" />
 
         <activity android:name=".activity.NotificationActivity" />
         <activity android:name=".activity.CameraAlbumActivity" />
@@ -54,7 +55,7 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".activity.MediaActivity"></activity>
+        <activity android:name=".activity.MediaActivity"/>
     </application>
 
 </manifest>
