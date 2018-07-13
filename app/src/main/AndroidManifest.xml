@@ -55,7 +55,8 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".activity.MediaActivity"/>
+        <activity android:name=".activity.MediaActivity" />
+        <activity android:name=".activity.LoginActivity"/>
     </application>
 
 </manifest>
