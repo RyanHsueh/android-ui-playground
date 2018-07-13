@@ -31,7 +31,8 @@ public class NotificationActivity extends AppCompatActivity {
 
         initChannels("111", "Channel 111", NotificationManager.IMPORTANCE_DEFAULT);
 
-        Notification notification = getNotifiactionBuider()
+        Notification notification = getNotificationBuider()
+                .setContentTitle("普通通知")
                 .setContentText("This is notification message")
                 .setSound(uri)
                 .setLights(Color.CYAN, 750, 3000)
@@ -45,9 +46,10 @@ public class NotificationActivity extends AppCompatActivity {
         NotificationManager manager = getNotificationManager();
 
         // TODO : no effect of priority
-        initChannels("222", "Channel 222", NotificationManager.IMPORTANCE_HIGH);
+        initChannels("222", "Channel 222", NotificationManager.IMPORTANCE_DEFAULT);
 
-        Notification notification = getNotifiactionBuider()
+        Notification notification = getNotificationBuider()
+                .setContentTitle("長文通知")
                 .setStyle(new NotificationCompat.BigTextStyle().bigText("This is a long long long long long long long long long long message"))
                 .build();
 
@@ -59,7 +61,8 @@ public class NotificationActivity extends AppCompatActivity {
 
         initChannels("333", "Channel 333", NotificationManager.IMPORTANCE_DEFAULT);
 
-        Notification notification = getNotifiactionBuider()
+        Notification notification = getNotificationBuider()
+                .setContentTitle("圖片通知")
                 .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(
                         BitmapFactory.decodeResource(getResources(), R.drawable.img_lights)))
                 .build();
@@ -67,12 +70,27 @@ public class NotificationActivity extends AppCompatActivity {
         manager.notify(3, notification);
     }
 
-    private NotificationCompat.Builder getNotifiactionBuider() {
+
+    // TODO: why no importance effect??
+    public void advancedNotification(View view) {
+        NotificationManager manager = getNotificationManager();
+
+        initChannels("444", "Channel 444", NotificationManager.IMPORTANCE_HIGH);
+
+        Notification notification = getNotificationBuider()
+                .setContentTitle("重要通知")
+                .setContentText("This is notification message")
+                .setAutoCancel(true)
+                .build();
+
+        manager.notify(4, notification);
+    }
+
+    private NotificationCompat.Builder getNotificationBuider() {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.mipmap.ic_launcher)
-                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
 //                .setContentIntent(pi)
-                .setContentTitle("Content Title");
 
         return builder;
     }
